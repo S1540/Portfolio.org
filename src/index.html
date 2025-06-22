@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .blinking-cursor {
+      display: inline;
+      animation: blink 0.8s step-start infinite;
+      color: cyan;
+    
+    };
+  
+
+    </style>
+</head>
+<body bgcolor="bg-neutral-700" class="bg-gray-900 text-white font-sans antialiased">
+    <!------------ Loader------------>
+    <!-- Fullscreen Loader Overlay -->
+<div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+  <div class="flex space-x-2">
+    <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+    <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+    <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+  </div>
+</div>
+<!-- Header -->
+    <header class="shadow-md backdrop-blur-xl shadow-black sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="">
+       <img src="./assets/download.png" class="h-20 rounded-full" alt="">
+      </div>
+
+      <!-- Navigation (Desktop) -->
+       <nav class="flex justify-around">
+      <div class="hidden md:flex space-x-6 text-white font-medium">
+        <a href="#home" class="relative text-white px-4 py-2 transition-all duration-500 ease-in-out hover:text-cyan-400
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400
+        after:transition-all after:duration-500 hover:after:w-full ">Home</a>
+        <a href="#about" class="relative text-white px-4 py-2 transition-all duration-500 ease-in-out hover:text-cyan-400
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400
+        after:transition-all after:duration-500 hover:after:w-full">About</a>
+        <a href="#skills" class="relative text-white px-4 py-2 transition-all duration-500 ease-in-out hover:text-cyan-400
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400
+        after:transition-all after:duration-500 hover:after:w-full">Skills</a>
+        <a href="#Project" class="relative text-white px-4 py-2 transition-all duration-500 ease-in-out hover:text-cyan-400
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400
+        after:transition-all after:duration-500 hover:after:w-full">Project</a>
+        <a href="#blog" class="relative text-white px-4 py-2 transition-all duration-500 ease-in-out hover:text-cyan-400
+        after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400
+        after:transition-all after:duration-500 hover:after:w-full">
+  Blog
+</a>
+      </div>
+        <div class="hidden md:block ">
+          <i class="fa-solid fa-thumbs-up text-3xl text-cyan-400 ml-10">
+            <span class="text-sm text-white">10</span>
+          </i>
+        </div>
+      </nav>
+
+      <!-- Hamburger Icon -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-4xl text-white focus:outline-none">
+          ☰
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu (outside the header) -->
+  
+<div
+  id="mobile-menu"
+  class="md:hidden flex justify-around fixed top-20 left-0 w-full bg-white shadow-md scale-y-0 opacity-0 origin-top transition-all duration-300 ease-in-out z-40 px-2 py-2 space-y-2 text-gray-700 font-medium"
+>
+  <a href="#home" class="block hover:text-blue-600">Home</a>
+  <a href="https://iridescent-platypus-ae884b.netlify.app/src/" class="block hover:text-blue-600">Explore More</a>
+  <a href="https://www.instagram.com/shubham__singh.___/?hl=en"target='_blank' class="block hover:text-blue-600">Linkedin</a>
+  <a href="https://github.com/S1540" target="_blank" class="block hover:text-blue-600">Git Hub</a>
+</div>
+    <!-- Main content/Hero Section -->
+    <section id="home" class="text-white max-w-8xl p-5 flex justify-around flex-col -mt-12 md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-[url(./assets/backgroundorg.jpg)] bg-cover bg-no-repeat bg-center h-[97vh] w-full ">
+        <div class="flex flex-col max-w-lg">
+        <div class="text-gray-300 h-auto max-w-full  ">
+            <h1 class=" text-2xl md:text-3xl leading-10 font-semibold ">Hello, It's Me</h1>
+            <h2 class="text-3xl md:text-4xl font-bold">Shubham Singh</h2>
+            <p class="text-2xl md:text-3xl font-semibold">And I'm a <br> <span class=" typewriter text-4xl font-semibold md:text-5xl text-cyan-400 inline-block"></span> </p>
+        </div>
+        <div class="text-gray-400 max-w-full mt-8 font-semibold">
+            <p>I am a frontend developer with a passion for creating responsive and user-friendly web experiences. Constantly improving my skills, I strive for excellence and precision in every project. My goal is to deliver clean, efficient, and impactful designs that elevate user interaction...</p>
+        </div>
+        <div class="flex items-center space-x-5 mt-8 text-white">
+            <a href="./assets/ResumeS1.pdf" download="download" class="relative  bg-blue-500 p-2 rounded-md group">
+              <span class="relative z-10 font-semibold transition-colors duration-500  group-hover:text-white">Resume 🡫</span>
+            <span class="absolute left-0 top-0 h-full w-0 rounded-md bg-neutral-700  transition-all duration-500 ease-out group-hover:w-full"></span>
+            </a>
+
+            <a href="" class="relative bg-blue-500 p-2 rounded-md group">
+              <span class="relative z-10 font-semibold transition-colors duration-500 group-hover:text-white">Explore More 🡪</span>
+              <span class="absolute h-full w-0 top-0 left-0 bg-neutral-700 rounded-md transition-all duration-500 group-hover:w-full"></span>
+            </a>
+        </div>
+        <!-- Social links -->
+        <div class="items-center space-x-4 mt-12 text-3xl md:text-4xl ">
+        <a id="linkedin" href="https://www.linkedin.com/in/shubham-0q7/" target="_blank"> <i class="fa-brands fa-linkedin text-blue-500 "></i></a>
+
+        <a id="github" href="https://github.com/S1540" target="_blank" > <i class="fa-brands fa-github text-white 
+         "></i></a>
+
+         <a href="https://wa.me/917050043530"target="_blank">
+          <i class="fa-brands fa-whatsapp text-green-500 "></i>
+         </a>
+
+         <a href="#twitter"target="_blank">
+          <i class="fa-brands fa-twitter text-blue-500 "></i>
+         </a>
+
+         <a href="https://www.facebook.com/Sankii70?rdid=6tfDmzIxjBUgeU8L&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Q8JhRjkTM%2F#"><i class="fa-brands fa-facebook text-blue-500 "></i></a>
+      </div>
+        </div> 
+
+        <!------------ Profile Section------------- -->
+        <div class="max-w-xl h-screen  hidden md:block">
+          <img src="./assets/orignal2.png" class=" h-[91vh] mt-14 transition duration-500 hover:brightness-65 " alt="Profile image">
+        </div>
+    </section>
+
+    <!----------- About Section--------- -->
+    <section id="about" class="max-w-8xl m-auto bg-neutral-800 min-h-screen flex flex-col gap-4 md:flex-row justify-around  flex-wrap ">
+      <div class=" flex-1 max-w-lg min-h-screen border-1 border-gray-600 p-4 rounded-md shadow-2xl shadow-black bg-neutral-800">
+        <h1 class=" text-2xl md:text-4xl font-semibold text-center p-2 ">About Me</h1><hr>
+        <div class=" flex flex-col gap-3 mt-7 text-gray-300 font-semibold">
+          <p class="first-letter:text-xl">
+            Hello! I'm <span class="font-semibold text-cyan-500">Shubham Singh</span>, a passionate Frontend Developer currently learning the <span class="font-semibold text-cyan-500"> MERN Stack</span>. I love crafting clean, responsive, and user-friendly websites that offer smooth user experiences.
+          </p>
+          <p class="first-letter:text-xl ">
+            I have hands-on experience with <span class="font-semibold text-cyan-500">HTML, CSS, JavaScript, Tailwind CSS, and React</span>, and I’m also exploring Node.js, Express, and MongoDB to become a full-stack developer.
+          </p>
+          <p class="first-letter:text-xl">
+            I’ve built several projects like a <span class="font-semibold text-red-500">Task Manager</span>, a <span class="font-semibold text-green-500">Portfolio Website</span> , and I'm currently working on an <span class="font-semibold text-yellow-500">E-commerce platform </span> as a practice project to sharpen my real-world skills.
+          </p>
+          <p class="first-letter:text-xl ">
+            I’m doing a <span class="font-semibold text-cyan-500">7-month MERN Stack</span> course from a reputed institute, and constantly improving through project-building and self-practice.
+          </p>
+          <p class="first-letter:text-xl ">
+            My future goal is to get a web development job, take freelance projects, and eventually launch my own freelancing website to help  <span class="text-green-400 font-semibold">businesses</span> grow online.
+          </p>
+          <p class="first-letter:text-xl">
+            When I’m not coding, you’ll find me exploring UI/UX designs, keeping up with tech trends, or playing PUBG with my squad.
+          </p>
+          <p class="text-lg md:text-4xl font-semibold text-green-400">Let’s connect and build something amazing together!</p>
+        </div>
+      </div>
+
+      <!-- Education Or Achievment -->
+       <div class=" flex-1 max-w-lg border-1 border-gray-600 p-4 rounded-md shadow-2xl shadow-black bg-neutral-800">
+        <h1 class="text-2xl md:text-3xl font-semibold text-center p-2">Education</h1><hr>
+        <div class="mt-7">
+          <h1 class="text-xl md:text-2xl text-cyan-500 font-semibold pb-2">MERN Stack :</h1>
+          <p class="font-semibold">Completed a 7-month MERN Stack Development Course (March-2025 : August 2025)</p>
+          <p>Training Institute : 4Achivers, Noida Sector-2</p>
+          <div class="flex items-center gap-3">
+             <img src="https://4achievers.com/images/4achievers_logo.png" class="w-44" alt="">
+             <a href="https://4achievers.com/" target="_blank" class="text-blue-500 underline text-sm md:text-lg">Visit : 4Achivers</a>
+          </div>
+          <div>
+            <h1 class="text-xl md:text-2xl text-cyan-500 font-semibold pb-2 pt-2">Graduation :</h1>
+
+
+
+          </div>
+        </div>
+       </div>
+    </section>
+
+    
+
+    
+
+
+
+
+<script src="./script.js" ></script>
+</body>
+</html>
