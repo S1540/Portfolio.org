@@ -6,6 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Orbitron:wght@400..900&family=Rye&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <style>
       @keyframes blink {
       0%, 100% { opacity: 1; }
@@ -22,7 +25,7 @@
 
     </style>
 </head>
-<body class="bg-zinc-700 text-white font-sans antialiased">
+<body class="bg-gray-700">
     <!------------ Loader------------>
     <!-- Fullscreen Loader Overlay -->
 <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
@@ -33,7 +36,7 @@
   </div>
 </div>
 <!-- Header -->
-    <header class="shadow-md backdrop-blur-xl shadow-black sticky top-0 z-50">
+    <header class="shadow-sm bg-white/10 border-b-1 border-gray-700 backdrop-blur-lg shadow-black sticky top-0 z-50" style="background: rgba(18, 18,18,0.3);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       <!-- Logo -->
@@ -43,7 +46,7 @@
 
       <!-- Navigation (Desktop) -->
        <nav class="flex justify-around">
-      <div class="hidden md:flex space-x-6 text-white font-medium">
+      <div class="hidden md:flex space-x-6 text-white font-semibold ">
         <a href="#home" class="relative text-white px-4 py-2 transition-all duration-500 ease-in-out hover:text-cyan-400
         after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400
         after:transition-all after:duration-500 hover:after:w-full ">Home</a>
@@ -91,8 +94,8 @@
   <a href="https://github.com/S1540" target="_blank" class="block hover:text-blue-600">Git Hub</a>
 </div>
     <!-- Main content/Hero Section -->
-    <section id="home" class="text-white max-w-8xl p-5 flex justify-around flex-col -mt-12 md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-[url(./assets/backgroundorg.jpg)] bg-cover bg-no-repeat bg-center h-[97vh] w-full ">
-        <div class="flex flex-col max-w-lg">
+    <section id="home" class="text-white max-w-full p-5 flex justify-around flex-col -mt-12 md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-[url(./assets/bg2.jpg)] bg-cover bg-no-repeat bg-center h-[97vh] w-full ">
+        <div class="flex flex-col max-w-lg backdrop-blur-[3px] p-3 rounded-md bg-white/10 " style="background: rgba(18,18,18,0.1);" >
         <div class="text-gray-300 h-auto max-w-full  ">
             <h1 class=" text-2xl md:text-3xl leading-10 font-semibold ">Hello, It's Me</h1>
             <h2 class="text-3xl md:text-4xl font-bold">Shubham Singh</h2>
@@ -136,62 +139,76 @@
           <img src="./assets/orignal2.png" class=" h-[91vh] mt-14 transition duration-500 hover:brightness-65 " alt="Profile image">
         </div>
     </section>
-
-    <!----------- About Section--------- -->
-    <section id="about" class="max-w-full m-auto bg-neutral-800 min-h-screen flex flex-col gap-4 justify-around leading-8 flex-wrap ">
-      <div class=" flex-1 m-auto w-full min-h-96 border-1 border-gray-600 p-4 rounded-md shadow-2xl shadow-black bg-neutral-800 transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-md hover:shadow-cyan-400">
-        <h1 class=" text-2xl md:text-4xl font-semibold text-center  text-transparent bg-clip-text animated-gradient pb-2 font-sans ">About Me</h1><hr>
-        <div class=" flex flex-col gap-3 mt-7 text-gray-300 font-semibold pl-4">
-          <p class="first-letter:text-xl">
-            Hello! I'm <span class="font-semibold text-cyan-500">Shubham Singh</span>, a passionate Frontend Developer currently learning the <span class="font-semibold text-cyan-500"> MERN Stack</span>. I love crafting clean, responsive, and user-friendly websites that offer smooth user experiences.
-          </p>
-          <p class="first-letter:text-xl ">
-            I have hands-on experience with <span class="font-semibold text-cyan-500">HTML, CSS, JavaScript, Tailwind CSS, and React</span>, and I’m also exploring Node.js, Express, and MongoDB to become a full-stack developer.
-          </p>
-          <p class="first-letter:text-xl">
-            I’ve built several projects like a <span class="font-semibold text-red-500">Task Manager</span>, a <span class="font-semibold text-green-500">Portfolio Website</span> , and I'm currently working on an <span class="font-semibold text-yellow-500">E-commerce platform </span> as a practice project to sharpen my real-world skills.
-          </p>
-          <p class="first-letter:text-xl ">
-            I’m doing a <span class="font-semibold text-cyan-500">7-month MERN Stack</span> course from a reputed institute, and constantly improving through project-building and self-practice.
-          </p>
-          <p class="first-letter:text-xl ">
-            My future goal is to get a web development job, take freelance projects, and eventually launch my own freelancing website to help  <span class="text-green-400 font-semibold">businesses</span> grow online.
-          </p>
-          <p class="first-letter:text-xl">
-            When I’m not coding, you’ll find me exploring UI/UX designs, keeping up with tech trends, or playing PUBG with my squad.
-          </p>
-          <p class="text-lg md:text-2xl font-semibold text-green-400">Let’s connect and build something amazing together!</p>
-        </div>
-      </div>
-
-      <!-- Education Or Achievment -->
-       <div class=" flex-1 max-w-full border-1 border-gray-600 p-4 rounded-md shadow-2xl shadow-black bg-neutral-800 transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-md hover:shadow-cyan-400">
-        <h1 class="text-2xl md:text-4xl font-semibold text-center  text-transparent bg-clip-text animated-gradient pb-2 font-sans">Education</h1><hr>
-        <div class="mt-7 p-2">
-          <h1 class="text-xl md:text-2xl text-cyan-500 font-semibold pb-2">MERN Stack :</h1>
-          <p class="font-semibold">Completed a 7-month MERN Stack Development Course (March-2025 : August 2025)</p>
-          <p>Training Institute : 4Achivers, Noida Sector-2</p>
-          <div class="flex items-center gap-3">
-             <img src="https://4achievers.com/images/4achievers_logo.png" class="w-44" alt="">
-             <a href="https://4achievers.com/" target="_blank" class="text-blue-500 underline text-sm md:text-lg">Visit : 4Achivers</a>
-          </div>
-          <div class="leading-5">
-            <h1 class="text-xl md:text-2xl text-cyan-500 font-semibold pb-2 pt-2">Graduation :</h1>
-            <p class="font-semibold">Bachelor of Computer Application : <span class="font-bold text-cyan-400">(BCA)</span></p>
-            <p><span class="italic">Session :</span> 2021 - 2024 ,</p>
-          </div>
-        </div>
-       </div>
-    </section>
-
-    <!---------------- Skills Section ------------------->
-    <section id="skills" class="max-w-full h-96 mt-8 bg-neutral-800 ">
-      <div class="font-semibold text-2xl md:text-4xl text-transparent bg-clip-text animated-gradient pb-2 font-sans">
-        <h1 class="">Develop skills</h1>
-      </div>
-      
-    </section>
     
+    <!-- About Section -->
+     <!-- left Part -->
+     <section class="max-w-full bg-neutral-950 h-[97vh] w-full flex flex-col md:flex-row justify-center-safe items-center gap-5 sm:gap-8 p-5">
+      <h1 class="text-center animated-gradient text-2xl sm:hidden font-[Rye]">I am a frontend Develepor</h1>
+     <div class="group relative h-72 w-52 md:h-96 md:w-72 [perspective:1000px]">
+  <div
+    class=" flex-1 absolute duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]"
+  >
+    <div
+      class="absolute w-full h-full rounded-xl bg-gradient-to-br from-violet-400 to-indigo-600  text-white [backface-visibility:hidden]"
+    >
+      <div class="flex flex-col h-full">
+        <div class="overflow-hidden">
+          <img src="./assets/image S3.jpg" class="bg-contain bg-center  rounded-md" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute w-full h-full rounded-xl bg-gradient-to-br from-neutral-800 to-zinc-500 backdrop-blur-2xl p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]"
+    >
+      <div class="flex flex-col text-white/80 h-full">
+        <div class="text-2xl font-bold mb-4 text-yellow-500">About Me</div>
+        <div class="flex-grow text-sm md:text-base ">
+          <p class="py-1">
+            <span class="font-semibold">Name :</span> Shubham Singh </p>
+            <p class="py-1"><span class="font-semibold">Age :</span> 22 Years </p>
+           <p class="py-1"> <span class="font-semibold">Location :</span> Buxar,Bihar (802128) India</p>
+           <p class="py-1"> <span class="font-semibold">Qualification :
+           </span>BCA (Bachelor of Computer Application)</p>
+           <p class="py-1"><span>Mob : </span>7050043530</p>
+
+        </div>
+        <div class=" justify-between items-center mt-auto hidden md:flex">
+          <button
+            class="px-4 py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+          >
+            Action
+          </button>
+          <span class="text-3xl">✨</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Right Part -->
+      <div class=" flex-2 max-w-2xl h-72 md:h-96 text-white ">
+        <h1 class="text-center hidden md:block animated-gradient text-2xl sm:text-3xl font-[Rye]">I am a frontend Develepor</h1>
+        <div class="gap-4 backdrop-blur-sm ">
+          <p class="text-gray-300 font-semibold text-sm md:text-base mt-7">
+           I'm a passionate frontend developer skilled in <span class="text-yellow-500">HTML, CSS, JavaScript, and React</span> . I create clean, responsive, and modern UIs using <span class="text-green-500">Bootstrap and Tailwind CSS</span> . I'm also exploring backend with Node.js to grow as a full-stack developer. I focus on writing maintainable code and delivering smooth user experiences.
+          </p>
+
+          <p class="text-gray-300 font-semibold text-sm md:text-base mt-4">
+            Familiar with collaborative workflows using <span class="text-red-500 font-bold"> Git/GitHub</span> and comfortable working on real-time updates within a team environment.
+          </p>
+
+          <p class="text-gray-300 font-semibold text-sm md:text-base mt-4"> Detail-oriented and quick learner, committed to writing clean, maintainable code while continuously learning new technologies. Passionate about solving real-world problems and aiming to grow into a full-stack developer to contribute meaningfully to innovative projects.</p>
+          
+        </div>
+
+
+
+
+      </div>
+
+
+     </section>
 
     
 

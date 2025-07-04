@@ -56,3 +56,35 @@ let speed = 100;
   }
   setTimeout(TypeWriter, speed)
  } TypeWriter();
+
+//  Skill Cards...........................
+const Cards = [
+  {
+    title : 'HTML',
+    description : 'Hypertext Markup Language Backbone Of Web Development:',
+    icon : 'fa-brands fa-html5',
+    color : 'bg-orange-500',
+    textColor : 'text-white',
+  },
+  {
+    title : 'CSS',
+    description : 'Cascading Style Sheets For Styling Web Pages:',
+    icon : 'fa-brands fa-css3-alt',
+    color : 'bg-blue-500',
+    textColor : 'text-white',
+  },
+  {
+    title : 'JavaScript',
+    description : 'Dynamic Programming Language For Web Development:',
+    icon : 'fa-brands fa-js',
+    color : 'bg-red-500',
+    textColor : 'text-white',
+  },
+  {
+    title : 'React',
+    description : 'JavaScript Library For Building User Interfaces:',
+    icon : 'fa-brands fa-react',
+    color : 'bg-cyan-400',
+    textColor : 'text-white'
+  }
+]
