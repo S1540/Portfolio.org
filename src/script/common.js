@@ -4,27 +4,32 @@ fetch("header.html")
   .then((response) => response.text())
   .then((data) => {
     header.innerHTML = data;
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    let isOpen = false;
+
+    menuBtn.addEventListener("click", () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        mobileMenu.classList.remove("scale-y-0", "opacity-0");
+        mobileMenu.classList.add("scale-y-100", "opacity-100");
+      } else {
+        mobileMenu.classList.add("scale-y-0", "opacity-0");
+        mobileMenu.classList.remove("scale-y-100", "opacity-100");
+      }
+    });
   })
   .catch((error) => console.error("Error loading header:", error));
 
 //Menu bar for mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
 
-let isOpen = false;
-
-menuBtn.addEventListener("click", () => {
-  isOpen = !isOpen;
-  if (isOpen) {
-    mobileMenu.classList.remove("scale-y-0", "opacity-0");
-    mobileMenu.classList.add("scale-y-100", "opacity-100");
-  } else {
-    mobileMenu.classList.add("scale-y-0", "opacity-0");
-    mobileMenu.classList.remove("scale-y-100", "opacity-100");
-  }
-});
 // typewriter effect
-const texts = ["Frontend Developer...", "UI/UX Designer..."];
+const texts = [
+  "I'm Shubham Singh",
+  "Frontend Developer...",
+  "UI/UX Designer...",
+];
 let count = 0;
 let i = 0;
 let isDelete = false;
