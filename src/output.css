@@ -10,10 +10,11 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
-    --color-yellow-600: oklch(68.1% 0.162 75.834);
+    --color-yellow-700: oklch(55.4% 0.135 66.442);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
@@ -36,6 +37,7 @@
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
+    --color-zinc-900: oklch(21% 0.006 285.885);
     --color-zinc-950: oklch(14.1% 0.005 285.823);
     --color-neutral-600: oklch(43.9% 0 0);
     --color-neutral-800: oklch(26.9% 0 0);
@@ -43,9 +45,11 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-md: 28rem;
     --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
+    --container-4xl: 56rem;
     --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -53,6 +57,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -62,6 +68,8 @@
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-thin: 100;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
@@ -227,12 +235,6 @@
   }
 }
 @layer utilities {
-  .pointer-events-none {
-    pointer-events: none;
-  }
-  .invisible {
-    visibility: hidden;
-  }
   .absolute {
     position: absolute;
   }
@@ -368,6 +370,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-44 {
+    height: calc(var(--spacing) * 44);
+  }
   .h-72 {
     height: calc(var(--spacing) * 72);
   }
@@ -496,6 +501,9 @@
   .justify-center-safe {
     justify-content: safe center;
   }
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -598,6 +606,12 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-black\/10 {
+    background-color: color-mix(in srgb, #000 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 10%, transparent);
+    }
+  }
   .bg-black\/20 {
     background-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -608,6 +622,12 @@
     background-color: color-mix(in srgb, #000 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
+    }
+  }
+  .bg-black\/50 {
+    background-color: color-mix(in srgb, #000 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
     }
   }
   .bg-blue-500 {
@@ -691,8 +711,16 @@
     --tw-gradient-from: var(--color-violet-400);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-zinc-950 {
+    --tw-gradient-from: var(--color-zinc-950);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .to-indigo-600 {
     --tw-gradient-to: var(--color-indigo-600);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-neutral-800 {
+    --tw-gradient-to: var(--color-neutral-800);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-pink-500 {
@@ -742,6 +770,9 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -750,6 +781,12 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -760,8 +797,32 @@
   .align-text-top {
     vertical-align: text-top;
   }
+  .font-\[Faster\] {
+    font-family: Faster;
+  }
+  .font-\[IBM\] {
+    font-family: IBM;
+  }
+  .font-\[Merienda\] {
+    font-family: Merienda;
+  }
+  .font-\[Orbitron\] {
+    font-family: Orbitron;
+  }
+  .font-\[Plex\] {
+    font-family: Plex;
+  }
   .font-\[Rye\] {
     font-family: Rye;
+  }
+  .font-\[Serif\] {
+    font-family: Serif;
+  }
+  .font-\[Titillium\] {
+    font-family: Titillium;
+  }
+  .font-\[Web\] {
+    font-family: Web;
   }
   .font-\[Winky\] {
     font-family: Winky;
@@ -794,9 +855,17 @@
     --tw-leading: calc(var(--spacing) * 10);
     line-height: calc(var(--spacing) * 10);
   }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -1530,6 +1599,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-lg);
       line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .md\:font-medium {
+    @media (width >= 48rem) {
+      --tw-font-weight: var(--font-weight-medium);
+      font-weight: var(--font-weight-medium);
     }
   }
   .lg\:px-8 {
