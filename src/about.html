@@ -48,21 +48,35 @@
             class="w-full h-full rounded-full object-cover"
           />
         </div>
-        <div
-          class="max-w-lg flex items-center justify-center w-full h-12 md:h-18 backdrop-blur-sm bg-zinc-800/50 shadow-sm shadow-pink-500 transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-1 text-xl md:text-4xl text-center overflow-hidden md:rounded-sm"
+        <button
+          class="border border-b-red-600 border-t-red-600 border-l-0 border-r-0 text-gray-50 duration-300 relative group overflow-hidden h-14 max-w-lg w-full bg-black/20 p-2 font-semibold hover:bg-sky-700"
         >
-          <h1 class="">
-            <i class="fa-solid fa-down-long fa-flip mx-1.5 text-purple-600"></i>
-            <span class="text-white font-bold md:font-semibold"
-              >Know More About Me</span
-            >
-            <i
-              class="fa-solid fa-down-long fa-flip mx-1.5 text-fuchsia-500"
-            ></i>
-          </h1>
-        </div>
+          <div
+            class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150 duration-700 right-12 top-1 bg-yellow-500"
+          ></div>
+          <div
+            class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150 duration-700 right-20 -top-6 bg-orange-500"
+          ></div>
+          <div
+            class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8 rounded-full group-hover:scale-150 duration-700 right-32 top-6 bg-pink-500"
+          ></div>
+          <div
+            class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"
+          ></div>
+
+          <!-- Centered text -->
+          <p
+            class="absolute inset-0 flex items-center justify-center z-10 text-2xl md:text-4xl"
+          >
+            <i class="fa-solid fa-down-long fa-flip mx-3 text-purple-600"></i>
+            Know More About Me
+            <i class="fa-solid fa-down-long fa-flip mx-3 text-pink-600"></i>
+          </p>
+        </button>
       </div>
     </main>
+
+    <!-- From Uiverse.io by Javierrocadev -->
 
     <script src="./script/common.js" defer></script>
   </body>
