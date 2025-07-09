@@ -5,56 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Faster+One&family=Merienda:wght@300..900&family=Orbitron:wght@400..900&family=Rye&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Faster+One&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merienda:wght@300..900&family=Orbitron:wght@400..900&family=Rye&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
-  <body class="bg-zinc-800 overflow-x-hidden">
+
+  <body class="bg-zinc-800 text-white overflow-x-hidden">
+    <!-- Header (optional fixed navbar) -->
     <div
       id="header"
       class="fixed left-0 right-0 top-0 z-50 overflow-x-hidden"
     ></div>
 
-    <div
-      class="relative max-w-full w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
-    >
-      <img src="./assets/bg4.jpg" class="object-cover w-full h-full" />
-    </div>
+    <!-- Hero Section with Background Image and Centered Content -->
+    <div class="relative w-full h-screen overflow-hidden">
+      <img
+        src="./assets/bg4.jpg"
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-    <main class="absolute top-20 left-0 right-0 max-w-full w-full h-screen">
-      <div
-        class="bg-black/30 border-b border-t border-red-500/30 backdrop-blur-xs max-w-xl w-full h-16 m-auto text-center p-1 my-1"
+      <main
+        class="absolute top-24 left-0 right-0 z-10 flex flex-col items-center justify-center text-white text-center px-2"
       >
-        <h1
-          class="typewriter font-[Winky] text-4xl font-semibold md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500"
-        ></h1>
-      </div>
-      <div
-        class="max-w-full h-[450px] flex flex-col justify-center items-center"
-      >
+        <!-- Typing Text -->
+        <div
+          class="bg-black/30 border-y border-red-500/30 backdrop-blur-xs w-full max-w-xl p-2 mb-14 z-20"
+        >
+          <h1
+            class="typewriter font-[Winky] text-4xl md:text-5xl bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent font-semibold"
+          ></h1>
+        </div>
+
+        <!-- Bouncing Profile -->
         <div class="w-72 h-72 rounded-full animate-bounce">
           <img
-            src="./assets/image S3.jpg"
+            src="./assets/AboutProfile.jpg"
             class="w-full h-full rounded-full object-cover"
           />
         </div>
+
+        <!-- Scroll Button -->
         <button
+          id="scroll-btn"
           class="border border-b-red-600 border-t-red-600 border-l-0 border-r-0 text-gray-50 duration-300 relative group overflow-hidden h-14 max-w-lg w-full bg-black/20 p-2 font-semibold hover:bg-sky-700"
         >
           <div
@@ -70,7 +72,6 @@
             class="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4 rounded-full group-hover:scale-150 duration-700 right-2 top-12 bg-red-600"
           ></div>
 
-          <!-- Centered text -->
           <p
             class="absolute inset-0 flex items-center justify-center z-10 text-2xl md:text-4xl"
           >
@@ -79,34 +80,41 @@
             <i class="fa-solid fa-down-long fa-flip mx-3 text-pink-600"></i>
           </p>
         </button>
-      </div>
-    </main>
+      </main>
+    </div>
 
+    <!-- About Section -->
     <div
-      class="relative max-w-full w-full h-screen bg-gradient-to-r from-zinc-950 to-neutral-800 text-white overflow-x-hidden"
+      id="about-section"
+      class="w-full min-h-screen bg-gradient-to-r from-zinc-950 to-neutral-800 px-4 py-10"
     >
       <div
-        class="max-w-8xl w-full h-auto flex flex-col md:flex-row justify-center-safe items-center p-3 m-auto gap-5"
+        class="max-w-8xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-10"
       >
+        <!-- Text -->
         <div
-          class="max-w-xl h-auto bg-black/10 backdrop-blur-sm rounded-md pt-5 flex-1"
+          class="max-w-xl bg-black/10 backdrop-blur-sm rounded-md pt-5 flex-1 px-4"
         >
           <h1
-            class="text-2xl md:text-4xl font-semibold px-2 pb-4 text-gray-200 font-[Merienda]"
+            class="text-2xl md:text-4xl font-semibold pb-4 text-gray-200 font-[Merienda]"
           >
             I'M Frontend Developer
           </h1>
-          <div class="w-full h-44 px-2 text-base md:font-medium text-gray-300">
-            <p>
-              I’m a passionate and detail-oriented web developer, eager to turn
-              ideas into responsive and engaging websites using HTML, CSS,
-              Bootstrap, Tailwind CSS, and JavaScript. As a fresher, I bring
-              energy, creativity, and a strong desire to grow in the world of
-              front-end development.
-            </p>
-          </div>
+          <p class="text-base md:font-medium text-gray-300">
+            I’m a passionate and detail-oriented web developer, eager to turn
+            ideas into responsive and engaging websites using
+            <span class="text-red-500 italic">HTML</span>,
+            <span class="text-blue-500 italic">CSS</span>,
+            <span class="text-indigo-500 italic">Bootstrap</span>,
+            <span class="text-cyan-500 italic">Tailwind CSS</span>, and
+            <span class="text-yellow-600 italic">JavaScript</span>. As a
+            fresher, I bring energy, creativity, and a strong desire to grow in
+            the world of front-end development.
+          </p>
         </div>
-        <div class="max-w-lg w-full h-auto flex-1">
+
+        <!-- Animation -->
+        <div class="max-w-lg w-full flex-1">
           <lottie-player
             src="./assets/Animation - 1751998241480.json"
             loop
@@ -114,9 +122,79 @@
           ></lottie-player>
         </div>
       </div>
+
+      <!-- Skills Section (Website Testing, Clean Code, Responsive Design) -->
+      <div class="mt-16">
+        <div class="text-center">
+          <h1 class="text-2xl md:text-5xl font-semibold font-[Orbitron]">
+            Website Testing, Clean and Responsive.
+          </h1>
+          <span class="h-1 w-44 md:w-56 bg-amber-500 block mx-auto my-2"></span>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8 mt-8"
+        >
+          <!-- Card 1 -->
+          <div class="max-w-md w-full flex flex-col items-center">
+            <lottie-player
+              src="./assets/Animation - Testing.json"
+              autoplay
+              loop
+              class="w-full h-64 md:h-72"
+            ></lottie-player>
+            <div class="w-full px-5 pb-5">
+              <h1 class="text-lg md:text-2xl font-semibold">
+                Website Testing :
+              </h1>
+              <p class="mt-1">
+                We test every page for speed, design, and performance to ensure
+                everything works smoothly. Your website stays fast, clean, and
+                ready for all users.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="max-w-md w-full flex flex-col items-center">
+            <lottie-player
+              src="./assets/Animation - Clean code.json"
+              autoplay
+              loop
+              class="w-full h-64 md:h-72"
+            ></lottie-player>
+            <div class="w-full px-5 pb-5">
+              <h1 class="text-lg md:text-2xl font-semibold">Clean Code :</h1>
+              <p class="mt-1">
+                We write clean, optimized code that's easy to maintain and
+                scalable for future updates and features.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="max-w-md w-full flex flex-col items-center">
+            <lottie-player
+              src="./assets/Animation - Responsive.json"
+              autoplay
+              loop
+              class="w-full h-64 md:h-72"
+            ></lottie-player>
+            <div class="w-full px-5 pb-5">
+              <h1 class="text-lg md:text-2xl font-semibold">
+                Responsive Design :
+              </h1>
+              <p class="mt-1">
+                Your site looks perfect on mobiles, tablets, and desktops. We
+                ensure smooth experience on all screen sizes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- From Uiverse.io by Javierrocadev -->
+    <!-- Smooth scroll JS -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./script/common.js" defer></script>
   </body>
