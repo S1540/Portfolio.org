@@ -9,7 +9,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .blinking-cursor {
+        display: inline;
+        animation: blink 0.8s step-start infinite;
+        color: purple;
+      }
+    </style>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,14 +120,14 @@
           >
             I'M Frontend Developer
           </h1>
-          <p class="text-base md:font-medium text-gray-300">
+          <p class="text-base font-[Inter] leading-relaxed text-gray-300">
             I’m a passionate and detail-oriented web developer, eager to turn
             ideas into responsive and engaging websites using
-            <span class="text-red-500 italic">HTML</span>,
+            <span class="text-red-400 italic">HTML</span>,
             <span class="text-blue-500 italic">CSS</span>,
             <span class="text-indigo-500 italic">Bootstrap</span>,
-            <span class="text-cyan-500 italic">Tailwind CSS</span>, and
-            <span class="text-yellow-600 italic">JavaScript</span>. As a
+            <span class="text-cyan-400 italic">Tailwind CSS</span>, and
+            <span class="text-yellow-400 italic">JavaScript</span>. As a
             fresher, I bring energy, creativity, and a strong desire to grow in
             the world of front-end development.
           </p>
@@ -126,17 +146,23 @@
       <!-- Skills Section (Website Testing, Clean Code, Responsive Design) -->
       <div class="mt-16">
         <div class="text-center">
-          <h1 class="text-2xl md:text-5xl font-semibold font-[Orbitron]">
+          <h1
+            class="text-2xl md:text-5xl font-semibold font-[Orbitron] text-gray-100"
+          >
             Website Testing, Clean and Responsive.
           </h1>
-          <span class="h-1 w-44 md:w-56 bg-amber-500 block mx-auto my-2"></span>
+          <span
+            class="h-1 w-44 md:w-64 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full block mx-auto my-2"
+          ></span>
         </div>
 
         <div
           class="flex flex-col md:flex-row items-center justify-between gap-8 mt-8"
         >
           <!-- Card 1 -->
-          <div class="max-w-md w-full flex flex-col items-center">
+          <div
+            class="max-w-md w-full flex flex-col items-center transition-all duration-300 ease-in hover:brightness-75"
+          >
             <lottie-player
               src="./assets/Animation - Testing.json"
               autoplay
@@ -144,10 +170,10 @@
               class="w-full h-64 md:h-72"
             ></lottie-player>
             <div class="w-full px-5 pb-5">
-              <h1 class="text-lg md:text-2xl font-semibold">
+              <h1 class="text-lg md:text-2xl font-semibold text-yellow-500">
                 Website Testing :
               </h1>
-              <p class="mt-1">
+              <p class="mt-1 font-[Inter]">
                 We test every page for speed, design, and performance to ensure
                 everything works smoothly. Your website stays fast, clean, and
                 ready for all users.
@@ -156,7 +182,9 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="max-w-md w-full flex flex-col items-center">
+          <div
+            class="max-w-md w-full flex flex-col items-center transition-all duration-300 ease-in hover:brightness-75"
+          >
             <lottie-player
               src="./assets/Animation - Clean code.json"
               autoplay
@@ -164,8 +192,10 @@
               class="w-full h-64 md:h-72"
             ></lottie-player>
             <div class="w-full px-5 pb-5">
-              <h1 class="text-lg md:text-2xl font-semibold">Clean Code :</h1>
-              <p class="mt-1">
+              <h1 class="text-lg md:text-2xl font-semibold text-cyan-400">
+                Clean Code :
+              </h1>
+              <p class="mt-1 font-[Inter]">
                 We write clean, optimized code that's easy to maintain and
                 scalable for future updates and features.
               </p>
@@ -173,7 +203,9 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="max-w-md w-full flex flex-col items-center">
+          <div
+            class="max-w-md w-full flex flex-col items-center transition-all duration-300 ease-in hover:brightness-75"
+          >
             <lottie-player
               src="./assets/Animation - Responsive.json"
               autoplay
@@ -181,10 +213,10 @@
               class="w-full h-64 md:h-72"
             ></lottie-player>
             <div class="w-full px-5 pb-5">
-              <h1 class="text-lg md:text-2xl font-semibold">
+              <h1 class="text-lg md:text-2xl font-semibold text-pink-500">
                 Responsive Design :
               </h1>
-              <p class="mt-1">
+              <p class="mt-1 font-[Inter]">
                 Your site looks perfect on mobiles, tablets, and desktops. We
                 ensure smooth experience on all screen sizes.
               </p>
@@ -193,8 +225,144 @@
         </div>
       </div>
     </div>
+    <!-- Education Section -->
+    <div
+      class="w-full min-h-screen bg-gradient-to-r from-zinc-950 to-neutral-800 px-4 py-10"
+    >
+      <h1
+        class="text-center text-2xl md:text-5xl font-semibold font-[Orbitron] text-gray-100 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-xl"
+      >
+        Qualification
+      </h1>
+      <div
+        class="max-w-7xl h-auto p-2 md:h-96 m-auto flex flex-col-reverse justify-center md:flex-row md:justify-around items-center gap-5 mt-8 border-b border-gray-600 transition-all duration-300 ease-in-out shadow-gray-600 hover:shadow-md hover:translate-y-1.5 hover:rounded-lg"
+      >
+        <div class="max-w-xl flex-1 h-auto leading-relaxed px-4">
+          <h1
+            class="text-3xl md:text-4xl font-bold pb-2 text-center text-gray-100"
+          >
+            Graduation
+          </h1>
+          <h1
+            class="text-2xl md:text-3xl font-semibold text-center text-gray-100"
+          >
+            Bachelor of Computer Application
+          </h1>
+          <p
+            class="text-lg md:text-xl font-semibold text-center pb-2 text-gray-100"
+          >
+            Sher Shah College Sasaram, Rohtas Bihar (VKSU)
+          </p>
+          <p class="text-gray-200 font-[Inter] resize-none text-center pb-1">
+            I hold a Bachelor of Computer Applications (BCA) degree from Sher
+            Shah College, Sasaram. During my 3-year program, I gained practical
+            knowledge of programming, web development, and core computer science
+            concepts.
+          </p>
 
-    <!-- Smooth scroll JS -->
+          <div
+            class="text-center w-44 text-lg font-semibold rounded-md shadow-amber-600 border hover:text-orange-600 transition-all duration-200 ease-in shadow-sm hover:-translate-y-1 hover:scale-105 hover:shadow-orange-600 text-amber-700 m-auto hover:border-0"
+          >
+            <a
+              href="https://shershahcollege.co.in/"
+              target="_blank"
+              class="block rounded-md border border-black p-2"
+              >Know More</a
+            >
+          </div>
+        </div>
+        <div class="max-w-sm flex-1 h-auto rounded-md">
+          <img src="./assets/Sher Shah College.avif" class="rounded-md" />
+        </div>
+      </div>
+      <!-- intermediate -->
+      <div
+        class="max-w-7xl h-auto p-2 md:h-96 m-auto flex flex-col-reverse justify-center md:flex-row md:justify-around items-center gap-5 mt-8 border-b border-gray-600 transition-all duration-300 ease-in-out shadow-gray-600 hover:shadow-md hover:translate-y-1.5 hover:rounded-lg"
+      >
+        <div class="max-w-sm flex-1 h-auto rounded-md p-2">
+          <img
+            src="https://services.sabpaisa.in/pages/images/SRISC.png"
+            class="rounded-md w-72"
+          />
+          <div
+            class="text-center md:hidden w-44 text-lg font-semibold rounded-md shadow-amber-600 border hover:text-orange-600 transition-all duration-200 ease-in shadow-sm hover:-translate-y-1 hover:scale-105 hover:shadow-orange-600 text-amber-700 m-auto hover:border-0"
+          >
+            <a
+              href="https://www.sscollegesasaram.org.in/"
+              target="_blank"
+              class="block rounded-md border border-black p-2"
+              >Know More</a
+            >
+          </div>
+        </div>
+
+        <div class="max-w-xl flex-1 h-auto leading-relaxed px-4">
+          <h1 class="text-3xl md:text-4xl font-bold pb-2 text-center">
+            intermediate (BSEB)
+          </h1>
+          <h1 class="text-2xl md:text-3xl font-semibold text-center">
+            Science
+          </h1>
+          <p class="text-lg md:text-xl font-semibold text-center pb-2">
+            Shree Sankar College Takiya Sasaram, Rohtash
+          </p>
+          <p class="text-gray-200 font-[Inter] resize-none text-center p-2">
+            I completed my 12th (Intermediate) from the Bihar School Examination
+            Board (BSEB) with Science stream. My interest in computers and
+            technology during school led me to pursue BCA.
+          </p>
+          <div
+            class="text-center hidden md:block w-44 text-lg font-semibold rounded-md shadow-amber-600 border hover:text-orange-600 transition-all duration-200 ease-in shadow-sm hover:-translate-y-1 hover:scale-105 hover:shadow-orange-600 text-amber-700 m-auto hover:border-0"
+          >
+            <a
+              href="https://www.sscollegesasaram.org.in/"
+              target="_blank"
+              class="block rounded-md border border-black p-2"
+              >Know More</a
+            >
+          </div>
+        </div>
+        <!-- 10th board -->
+      </div>
+
+      <div
+        class="max-w-7xl h-auto p-2 md:h-96 m-auto flex flex-col-reverse justify-center md:flex-row md:justify-around items-center gap-5 mt-8 border-b border-gray-600 transition-all duration-300 ease-in-out shadow-gray-600 hover:shadow-md hover:translate-y-1.5 hover:rounded-lg"
+      >
+        <div class="max-w-xl flex-1 h-auto leading-relaxed px-4">
+          <h1
+            class="text-3xl md:text-4xl font-bold pb-2 text-center text-gray-100"
+          >
+            High School (10<sup>th</sup> Board)
+          </h1>
+          <p
+            class="text-lg md:text-xl font-semibold text-center pb-2 text-gray-100"
+          >
+            Har Har Mahadev High School Kathrai Buxar, Bihar
+          </p>
+          <p class="text-gray-200 font-[Inter] resize-none text-center pb-1">
+            I completed my 10th from the Bihar School Examination Board (BSEB).
+            I was the school topper and received an award for academic
+            performance. This achievement boosted my confidence and interest in
+            learning.
+          </p>
+
+          <div
+            class="text-center w-44 text-lg font-semibold rounded-md shadow-amber-600 border hover:text-orange-600 transition-all duration-200 ease-in shadow-sm hover:-translate-y-1 hover:scale-105 hover:shadow-orange-600 text-amber-700 m-auto hover:border-0"
+          >
+            <a
+              href="https://shershahcollege.co.in/"
+              target="_blank"
+              class="block rounded-md border border-black p-2"
+              >Know More</a
+            >
+          </div>
+        </div>
+        <div class="max-w-sm flex-1 h-auto rounded-md">
+          <img src="./assets/Sher Shah College.avif" class="rounded-md" />
+        </div>
+      </div>
+    </div>
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./script/common.js" defer></script>
   </body>
