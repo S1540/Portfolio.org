@@ -6,6 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&family=Merienda:wght@300..900&family=Orbitron:wght@400..900&family=Rye&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -59,7 +68,7 @@
     <!-- Main content/Hero Section -->
     <section
       id="home"
-      class="text-white max-w-full p-5 flex justify-around flex-col -mt-12 md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-[url(./assets/bg5.jpg)] bg-right bg-cover bg-no-repeat sm:bg-center h-[97vh] w-full"
+      class="text-white max-w-full p-5 flex justify-around flex-col -mt-12 md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-gradient-to-r from-zinc-950 to-neutral-700 md:bg-[url(./assets/bg5.jpg)] bg-cover bg-no-repeat sm:bg-center h-[97vh] w-full"
     >
       <div
         class="flex flex-col max-w-lg backdrop-blur-[3px] p-3 rounded-md bg-white/10"
@@ -164,97 +173,92 @@
     </section>
 
     <!-- About Section -->
-    <!-- left Part -->
+
     <section
-      id="about"
-      class="max-w-full mt-1 bg-[url(./assets/bg6.jpg)] bg-[position: 90%_center] bg-cover bg-no-repeat sm:bg-center h-[95vh] w-full flex flex-col md:flex-row justify-center-safe items-center gap-5 sm:gap-8 p-5"
+      class="relative w-full h-auto bg-gradient-to-r from-zinc-950 to-neutral-800 overflow-hidden"
     >
-      <h1 class="text-center animated-gradient text-2xl sm:hidden font-[Rye]">
-        I am a frontend Develepor
-      </h1>
-      <div
-        class="group relative h-72 w-52 md:h-96 md:w-72 [perspective:1000px]"
+      <lottie-player
+        src="./assets/Animation-ball.json"
+        autoplay
+        loop
+        class="blur-sm absolute right-0 top-0 h-full w-1/2 md:w-1/4 opacity-50 pointer-events-none z-0"
       >
-        <div
-          class="flex-1 absolute duration-1000 w-full h-full [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]"
-        >
-          <div
-            class="absolute w-full h-full rounded-xl bg-gradient-to-br from-violet-400 to-indigo-600 text-white [backface-visibility:hidden]"
-          >
-            <div class="flex flex-col h-full">
-              <div class="overflow-hidden">
+      </lottie-player>
+
+      <!-- Content Section -->
+      <div
+        class="relative z-10 max-w-full w-full h-auto flex flex-col md:flex-row justify-center md:gap-20 items-center px-4 py-10 gap-6"
+      >
+        <!-- Flip Card Section -->
+        <div class="w-52 md:w-72 relative">
+          <div class="group h-72 md:h-96 w-full [perspective:1000px]">
+            <div
+              class="absolute w-full h-full duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]"
+            >
+              <div
+                class="absolute inset-0 w-full h-full rounded-md bg-gradient-to-br from-violet-400 to-indigo-600 text-white [backface-visibility:hidden]"
+              >
                 <img
                   src="./assets/image S3.jpg"
-                  class="bg-contain bg-center rounded-md"
-                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                  alt="Profile"
                 />
               </div>
-            </div>
-          </div>
 
-          <div
-            class="absolute w-full h-full rounded-xl bg-gradient-to-br from-neutral-800 to-zinc-500 backdrop-blur-2xl p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]"
-          >
-            <div class="flex flex-col text-white/80 h-full">
-              <div class="text-2xl font-bold mb-4 text-yellow-500">
-                About Me
-              </div>
-              <div class="flex-grow text-sm md:text-base">
-                <p class="py-1">
-                  <span class="font-semibold">Name :</span> Shubham Singh
-                </p>
-                <p class="py-1">
-                  <span class="font-semibold">Age :</span> 22 Years
-                </p>
-                <p class="py-1">
-                  <span class="font-semibold">Location :</span> Buxar,Bihar
-                  (802128) India
-                </p>
-                <p class="py-1">
-                  <span class="font-semibold">Qualification : </span>BCA
-                  (Bachelor of Computer Application)
-                </p>
-                <p class=""><span>Mob : </span>7050043530</p>
-              </div>
-              <div class="justify-between items-center mt-auto hidden md:flex">
-                <button
-                  class="px-4 py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
-                >
-                  Action
-                </button>
-                <span class="text-3xl">✨</span>
+              <!-- Back Side -->
+              <div
+                class="absolute w-full h-full rounded-xl bg-gradient-to-br from-neutral-800 to-zinc-500 backdrop-blur-2xl p-6 text-white [transform:rotateX(180deg)] [backface-visibility:hidden]"
+              >
+                <div class="flex flex-col text-white/80 h-full">
+                  <div class="text-2xl font-bold mb-4 text-yellow-500">
+                    About Me
+                  </div>
+                  <div class="flex-grow text-sm md:text-base space-y-1">
+                    <p>
+                      <span class="font-semibold">Name :</span> Shubham Singh
+                    </p>
+                    <p><span class="font-semibold">Age :</span> 22 Years</p>
+                    <p>
+                      <span class="font-semibold">Location :</span> Buxar, Bihar
+                      (802128) India
+                    </p>
+                    <p>
+                      <span class="font-semibold">Qualification :</span> BCA
+                    </p>
+                    <p><span class="font-semibold">Mob :</span> 7050043530</p>
+                  </div>
+                  <div
+                    class="mt-auto hidden md:flex justify-between items-center"
+                  >
+                    <button
+                      class="px-4 py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                    >
+                      Action
+                    </button>
+                    <span class="text-3xl">✨</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Right Part -->
-      <div class="flex-2 max-w-2xl h-72 md:h-96 text-white">
-        <h1
-          class="text-center hidden md:block animated-gradient text-4xl font-[Rye]"
-        >
-          I am a frontend Develepor
-        </h1>
-        <div class="gap-4 backdrop-blur-sm">
-          <p class="text-gray-300 font-semibold text-sm md:text-base mt-7">
+        <!-- Text Section -->
+        <div class="flex-1 max-w-xl w-full text-white">
+          <h1 class="text-2xl md:text-4xl font-[Merienda]">
+            I'M a Frontend Developer
+          </h1>
+          <p
+            class="font-[Inter] text-gray-300 font-semibold text-sm md:text-base mt-7"
+          >
             I'm a passionate frontend developer skilled in
-            <span class="text-yellow-500"
-              >HTML, CSS, JavaScript, and React</span
-            >
-            . I create clean, responsive, and modern UIs using
-            <span class="text-green-500">Bootstrap and Tailwind CSS</span> . I'm
+            <span class="text-yellow-500">HTML, CSS, JavaScript, and React</span
+            >. I create clean, responsive, and modern UIs using
+            <span class="text-green-500">Bootstrap and Tailwind CSS</span>. I'm
             also exploring backend with Node.js to grow as a full-stack
             developer. I focus on writing maintainable code and delivering
             smooth user experiences.
           </p>
-
-          <p class="text-gray-300 font-semibold text-sm md:text-base mt-4">
-            Familiar with collaborative workflows using
-            <span class="text-red-500 font-bold"> Git/GitHub</span> and
-            comfortable working on real-time updates within a team environment.
-          </p>
-
           <p class="text-gray-300 font-semibold text-sm md:text-base mt-4">
             Detail-oriented and quick learner, committed to writing clean,
             maintainable code while continuously learning new technologies.
@@ -262,17 +266,11 @@
             a full-stack developer to contribute meaningfully to innovative
             projects.
           </p>
-
-          <!-- From Uiverse.io by Javierrocadev -->
-          <button
-            class="mt-3 group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-rose-300 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-yellow-300 relative bg-neutral-900 h-13 w-52 text-left p-3 text-gray-50 text-base font-semibold rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg after:absolute after:z-10 after:w-20 after:h-20 after:content[''] after:bg-rose-500 after:right-8 after:top-3 after:rounded-full after:blur-lg"
-          >
-            Explore More
-          </button>
         </div>
       </div>
     </section>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./script/script.js" defer></script>
   </body>
 </html>
