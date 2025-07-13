@@ -45,7 +45,7 @@
       }
     </style>
   </head>
-  <body class="bg-zinc-950 overflow-x-hidden">
+  <body class="bg-gradient-to-r from-zinc-950 to-neutral-800 overflow-x-hidden">
     <!------------ Loader------------>
 
     <div
@@ -68,7 +68,7 @@
     <!-- Main content/Hero Section -->
     <section
       id="home"
-      class="text-white max-w-full p-5 flex justify-around flex-col -mt-12 md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-gradient-to-r from-zinc-950 to-neutral-700 md:bg-[url(./assets/bg5.jpg)] bg-cover bg-no-repeat sm:bg-center h-[97vh] w-full"
+      class="text-white max-w-full p-5 flex justify-around flex-col md:flex-row items-center md:m-auto md:-mt-14 gap-10 bg-gradient-to-r from-zinc-950 to-neutral-700 md:bg-[url(./assets/bg5.jpg)] bg-cover bg-no-repeat sm:bg-center h-auto md:h-[97vh] w-full"
     >
       <div
         class="flex flex-col max-w-lg backdrop-blur-[3px] p-3 rounded-md bg-white/10"
@@ -191,7 +191,9 @@
       >
         <!-- Flip Card Section -->
         <div class="w-52 md:w-72 relative">
-          <div class="group h-72 md:h-96 w-full [perspective:1000px]">
+          <div
+            class="group h-72 md:h-96 w-full [perspective:1000px] scroll-reval transition-all duration-500 ease-initial opacity-0 translate-y-20"
+          >
             <div
               class="absolute w-full h-full duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]"
             >
@@ -244,7 +246,9 @@
         </div>
 
         <!-- Text Section -->
-        <div class="flex-1 max-w-xl w-full text-white">
+        <div
+          class="flex-1 max-w-xl w-full text-white transition-all duration-500 ease-initial opacity-0 translate-y-20 scroll-reval"
+        >
           <h1 class="text-2xl md:text-4xl font-[Merienda]">
             I'M a Frontend Developer
           </h1>
@@ -270,17 +274,31 @@
       </div>
     </section>
 
-    <!-- Home Project Section -->
+    <!-- Home Skills Section -->
     <section
-      class="max-w-full w-full h-screen bg-gradient-to-r from-zinc-950 to-neutral-800"
+      id="skills-bar"
+      class="scroll-reval relative max-w-full w-full h-auto bg-gradient-to-r from-zinc-950 to-neutral-800 py-10 transition-all duration-500 ease-initial opacity-0 translate-y-20"
     >
-      <h1 class="text-4xl text-white text-center bg-red-500">Update Soon</h1>
+      <div class="max-w-full w-full h-14">
+        <h1
+          class="text-white font-semibold text-center text-2xl md:text-4xl font-[Orbitron]"
+        >
+          <span class="text-fuchsia-500">TECHNICAL</span>
+          <span class="text-indigo-300">SKILLS</span>
+        </h1>
+        <span
+          class="-mt-0.5 h-1 w-44 md:w-64 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full block mx-auto my-2"
+        ></span>
+      </div>
+      <!-- skills-BAR -->
+      <div
+        id="skillDiv"
+        class="max-w-full h-auto p-3 flex flex-wrap justify-center items-center gap-10"
+      ></div>
     </section>
-    <!-- end Project section -->
-
     <!-- My Service div -->
     <section
-      class="max-w-full w-full h-auto bg-gradient-to-r from-zinc-950 to-neutral-800"
+      class="max-w-full w-full h-auto bg-gradient-to-r from-zinc-950 to-neutral-800 py-10"
     >
       <div class="max-w-full w-full h-14">
         <h1
@@ -298,14 +316,14 @@
         class="max-w-full w-full h-auto gap-5 md:gap-0 flex flex-wrap md:flex-row items-center justify-evenly p-4"
       >
         <div
-          class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm"
+          class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm opacity-0 translate-y-20 scroll-reval"
         >
           <div
             class="w-56 h-72 bg-gradient-to-b from-transparent to-transparent transition-all duration-500 ease-in-out transform hover:rotate-[20deg] rounded-sm hover:rounded-md shadow-[0_0_10px_5px] shadow-fuchsia-600/20 hover:shadow-indigo-500/60 hover:shadow-[0_0_5px_5px]"
           >
             <div class="flex flex-col items-center justify-center text-white">
               <img src="./assets/developer home.png" class="h-36 w-36" />
-              <h1 class="text-2xl text-yellow-500 p-2 font-semibold">
+              <h1 class="text-2xl text-yellow-400 p-2 font-semibold">
                 Development
               </h1>
 
@@ -317,14 +335,14 @@
           </div>
         </div>
         <div
-          class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm"
+          class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm opacity-0 translate-y-20 scroll-reval"
         >
           <div
             class="w-56 h-72 bg-gradient-to-b from-transparent to-transparent transition-all duration-500 ease-in-out transform hover:rotate-[20deg] rounded-sm hover:rounded-md shadow-[0_0_10px_5px] shadow-fuchsia-600/20 hover:shadow-indigo-500/60 hover:shadow-[0_0_5px_5px]"
           >
             <div class="flex flex-col items-center justify-center text-white">
               <img src="./assets/clean-code home.png" class="h-36 w-36" />
-              <h1 class="text-2xl text-cyan-500 p-2 font-semibold">
+              <h1 class="text-2xl text-cyan-400 p-2 font-semibold">
                 Clean Code
               </h1>
 
@@ -335,14 +353,14 @@
           </div>
         </div>
         <div
-          class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm"
+          class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm opacity-0 translate-y-20 scroll-reval"
         >
           <div
             class="w-56 h-72 bg-gradient-to-b from-transparent to-transparent transition-all duration-500 ease-in-out transform hover:rotate-[20deg] rounded-sm hover:rounded-md shadow-[0_0_10px_5px] shadow-fuchsia-600/20 hover:shadow-indigo-500/60 hover:shadow-[0_0_5px_5px]"
           >
             <div class="flex flex-col items-center justify-center text-white">
               <img src="./assets/Responsive-home.png" class="h-36 w-36" />
-              <h1 class="text-2xl text-fuchsia-600 p-2 font-semibold">
+              <h1 class="text-2xl text-fuchsia-500 p-2 font-semibold">
                 Responsive
               </h1>
               <p class="p-2 text-center font-[Inter]">
