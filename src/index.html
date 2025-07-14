@@ -313,7 +313,7 @@
       </div>
       <!-- card div -->
       <div
-        class="max-w-full w-full h-auto gap-5 md:gap-0 flex flex-wrap md:flex-row items-center justify-evenly p-4"
+        class="max-w-full w-full h-auto gap-5 md:gap-0 flex flex-wrap md:flex-row items-center justify-evenly px-4 py-10 md:py-20"
       >
         <div
           class="p-5 w-xs h-72 hover:[perspective:800px] flex items-center justify-center hover:[transform:rotateX(40deg)] hover:[transform-style:preserve-3d] transition-all duration-500 ease-in-out rounded-md backdrop-blur-sm opacity-0 translate-y-20 scroll-reval"
@@ -369,6 +369,87 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact page -->
+    <section
+      class="max-w-full min-h-screen bg-fixed bg-center bg-cover bg-[url(./assets/contactPage.jpg)]"
+    >
+      <div
+        class="w-full relative bg-gradient-to-r from-zinc-950 to-neutral-800 flex flex-col md:flex-row justify-center items-center md:gap-14"
+      >
+        <!--Contact us palace Start-->
+        <div class="absolute top-0 left-0 right-0 h-14">
+          <h1
+            class="text-white font-semibold text-center text-2xl md:text-4xl font-[Orbitron]"
+          >
+            <span class="text-fuchsia-500">CONTACT</span>
+            <span class="text-indigo-300">US</span>
+          </h1>
+          <span
+            class="-mt-0.5 h-1 w-44 md:w-64 bg-gradient-to-r from-transparent via-amber-500 to-transparent rounded-full block mx-auto my-2"
+          ></span>
+        </div>
+        <!--Contact us palace end-->
+        <div class="order-2 max-w-md h-auto md:py-20">
+          <img src="./assets/contactPageAnmie.png" alt="" />
+        </div>
+        <!-- From Uiverse.io by Javierrocadev -->
+        <div
+          class="order-1 max-w-xl w-full h-[450px] my-10 md:my-24 relative overflow-hidden z-10 bg-white/10 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12"
+        >
+          <h2 class="text-2xl font-[Merienda] font-bold text-white mb-6">
+            Get in Touch
+          </h2>
+
+          <form method="post" action="#">
+            <div class="mb-4">
+              <label class="block text-sm font-medium text-gray-300" for="name"
+                >Full Name</label
+              >
+              <input
+                class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 outline-0 rounded-md text-white"
+                type="text"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-sm font-medium text-gray-300" for="email"
+                >Email Address</label
+              >
+              <input
+                class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 outline-0 rounded-md text-white"
+                name="email"
+                id="email"
+                type="email"
+                required
+              />
+            </div>
+
+            <div class="mb-4">
+              <label class="block text-sm font-medium text-gray-300" for="bio"
+                >Message</label
+              >
+              <textarea
+                class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 outline-0 rounded-md text-white"
+                rows="3"
+                name="bio"
+                id="bio"
+                required
+              ></textarea>
+            </div>
+
+            <div class="flex justify-end">
+              <button
+                class="bg-gradient-to-r from-purple-600 via-purple-400 to-blue-500 text-white px-4 py-2 font-bold rounded-md hover:opacity-80"
+                type="submit"
+              >
+                Connect
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
