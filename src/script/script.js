@@ -151,3 +151,11 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+// Footer Section
+
+const footer = document.getElementById("footerSec");
+fetch("footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    footer.innerHTML = data;
+  });

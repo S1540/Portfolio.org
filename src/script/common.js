@@ -75,3 +75,11 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".scroll-reval").forEach((el) => {
   observer.observe(el);
 });
+
+// footer section
+const footer = document.getElementById("footerSec");
+fetch("footer.html")
+  .then((response) => response.text())
+  .then((data) => {
+    footer.innerHTML = data;
+  });
