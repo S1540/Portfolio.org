@@ -3,22 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Full Width Swiper</title>
     <link rel="stylesheet" href="./output.css" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      /* Progress bar custom style */
+      .swiper-pagination-progressbar {
+        background: rgba(255, 255, 255, 0.2);
+        height: 8px;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .swiper-pagination-progressbar-fill {
+        background: #38bdf8; /* sky-400 */
+        border-radius: 999px;
+      }
+
+      .swiper-button-next {
+        right: 20px;
+      }
+      .swiper-button-prev {
+        left: 10px;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    </style>
   </head>
   <body class="bg-zinc-800 text-white overflow-x-hidden">
+    <!-- Fixed header -->
     <div
       id="header"
-      class="fixed left-0 right-0 top-0 z-50 overflow-x-hidden"
-    ></div>
+      class="fixed left-0 right-0 top-0 z-50 bg-zinc-900 shadow-md"
+    >
+      <h1 class="text-xl font-bold">My Website</h1>
+    </div>
 
-    <main>
-      <div
-        class="max-w-full w-full flex items-start md:items-center justify-center bg-center overflow-hidden mt-20"
-      >
-        <img src="./assets/Logo-removebg-preview.png" class="max-w-md" />
+    <main class="pt-20">
+      <div class="swiper mySwiper w-full relative">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/free-photo/view-futuristic-restaurant_23-2150946739.jpg?t=st=1755280818~exp=1755284418~hmac=4b93bb18f437bf5b652bbf2fe42a07990ddb79826df7537d7dea1d16cf9bff70&w=1480"
+              class="w-full h-[700px] object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/free-photo/front-view-man-living-as-digital-nomad_23-2151205399.jpg?t=st=1755280442~exp=1755284042~hmac=8a98f532579ab50ca4cbe579bf1879309e4c305a9b1ae170eb4570e8584ef103&w=1480"
+              class="w-full h-[700px] object-cover"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://img.freepik.com/free-photo/side-view-man-living-as-digital-nomad_23-2151205381.jpg?t=st=1755280758~exp=1755284358~hmac=d1fb313ce2bc04f3b8c2b1b1ea9a8a738d7e3de2177701660f765e65e2bc5c86&w=1480"
+              class="w-full h-[700px] object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Progress bar (bottom full width) -->
+        <div
+          class="swiper-pagination absolute bottom-0 left-0 right-0 z-10"
+        ></div>
       </div>
     </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000, // 5 sec
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+    </script>
 
     <script src="./script/common.js"></script>
   </body>

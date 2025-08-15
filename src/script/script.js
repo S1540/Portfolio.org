@@ -159,3 +159,4 @@ fetch("footer.html")
   .then((data) => {
     footer.innerHTML = data;
   });
+z;
