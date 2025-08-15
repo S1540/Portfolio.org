@@ -22,7 +22,13 @@ fetch("header.html")
   })
   .catch((error) => console.error("Error loading header:", error));
 
-//Menu bar for mobile menu toggle
+//Loader
+const loader = document.getElementById("loader");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 800);
+});
 
 // typewriter effect
 const texts = [

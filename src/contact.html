@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Width Swiper</title>
     <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -21,7 +26,7 @@
         overflow: hidden;
       }
       .swiper-pagination-progressbar-fill {
-        background: #38bdf8; /* sky-400 */
+        background: #1a23cf; /* sky-400 */
         border-radius: 999px;
       }
 
@@ -38,15 +43,25 @@
     </style>
   </head>
   <body class="bg-zinc-800 text-white overflow-x-hidden">
-    <!-- Fixed header -->
+    <!-- Loader -->
     <div
-      id="header"
-      class="fixed left-0 right-0 top-0 z-50 bg-zinc-900 shadow-md"
+      id="loader"
+      class="fixed inset-0 bg-neutral-600 flex items-center justify-center z-50"
     >
-      <h1 class="text-xl font-bold">My Website</h1>
+      <div class="flex space-x-2">
+        <div
+          class="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"
+        ></div>
+        <div
+          class="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"
+        ></div>
+        <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+      </div>
     </div>
+    <!-- Fixed header -->
+    <div id="header" class="sticky top-0 z-50 overflow-x-hidden"></div>
 
-    <main class="pt-20">
+    <main class="relative">
       <div class="swiper mySwiper w-full relative">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -54,26 +69,120 @@
               src="https://img.freepik.com/free-photo/view-futuristic-restaurant_23-2150946739.jpg?t=st=1755280818~exp=1755284418~hmac=4b93bb18f437bf5b652bbf2fe42a07990ddb79826df7537d7dea1d16cf9bff70&w=1480"
               class="w-full h-[700px] object-cover"
             />
+            <div class="absolute top-[70%] z-10 font-[Lato] px-20">
+              <h1
+                class="text-2xl md:text-4xl font-semibold text-gray-100 text-center py-2"
+              >
+                More Details "
+              </h1>
+              <a
+                href="https://api.whatsapp.com/send/?phone=7050043530&text&type=phone_number&app_absent=0"
+                class="relative inline-block text-lg px-6 py-2.5 backdrop-blur-md bg-indigo-600/20 hover:bg-sky-600 text-white font-semibold rounded-md border-2 border-dotted hover:border-dashed border-gray-400 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_10px_rgba(168,85,247,0.6)] active:scale-95 active:shadow-[0_0_10px_5px_rgba(168,85,247,0.4)] group"
+              >
+                <span class="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    class="w-6 h-6 text-purple-500 group-hover:text-white transition-colors duration-300"
+                  >
+                    <path
+                      d="M5 13l4 4L19 7"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                  <span>Contact Me</span>
+                </span>
+                <span
+                  class="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-purple-500/20 to-indigo-500/20"
+                ></span>
+              </a>
+            </div>
           </div>
           <div class="swiper-slide">
             <img
               src="https://img.freepik.com/free-photo/front-view-man-living-as-digital-nomad_23-2151205399.jpg?t=st=1755280442~exp=1755284042~hmac=8a98f532579ab50ca4cbe579bf1879309e4c305a9b1ae170eb4570e8584ef103&w=1480"
               class="w-full h-[700px] object-cover"
             />
+            <div class="absolute top-[70%] left-1/3 z-10 font-[Lato]">
+              <h1
+                class="text-2xl md:text-4xl font-semibold text-gray-100 text-center py-2"
+              >
+                Explore More Project
+              </h1>
+              <a
+                href="https://api.whatsapp.com/send/?phone=7050043530&text&type=phone_number&app_absent=0"
+                class="ml-20 md:ml-48 inline-block relative text-lg px-6 py-2.5 backdrop-blur-md bg-indigo-600/20 hover:bg-sky-600 text-white font-semibold rounded-md border-2 border-dotted hover:border-dashed border-gray-400 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_10px_rgba(168,85,247,0.6)] active:scale-95 active:shadow-[0_0_10px_5px_rgba(168,85,247,0.4)] group"
+              >
+                <span class="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    class="w-6 h-6 text-purple-500 group-hover:text-white transition-colors duration-300"
+                  >
+                    <path
+                      d="M5 13l4 4L19 7"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                  <span>Project</span>
+                </span>
+                <span
+                  class="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-purple-500/20 to-indigo-500/20"
+                ></span>
+              </a>
+            </div>
           </div>
           <div class="swiper-slide">
             <img
               src="https://img.freepik.com/free-photo/side-view-man-living-as-digital-nomad_23-2151205381.jpg?t=st=1755280758~exp=1755284358~hmac=d1fb313ce2bc04f3b8c2b1b1ea9a8a738d7e3de2177701660f765e65e2bc5c86&w=1480"
               class="w-full h-[700px] object-cover"
             />
+            <div class="absolute top-[70%] right-10 z-10 font-[Lato] px-20">
+              <h1
+                class="text-2xl md:text-4xl font-semibold text-gray-100 text-center py-2"
+              >
+                Why Hire Me "
+              </h1>
+              <a
+                href="https://api.whatsapp.com/send/?phone=7050043530&text&type=phone_number&app_absent=0"
+                class="relative inline-block text-lg px-6 py-2.5 backdrop-blur-md bg-indigo-600/20 hover:bg-sky-600 text-white font-semibold rounded-md border-2 border-dotted hover:border-dashed border-gray-400 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_10px_rgba(168,85,247,0.6)] active:scale-95 active:shadow-[0_0_10px_5px_rgba(168,85,247,0.4)] group"
+              >
+                <span class="flex items-center space-x-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    fill="none"
+                    class="w-6 h-6 text-purple-500 group-hover:text-white transition-colors duration-300"
+                  >
+                    <path
+                      d="M5 13l4 4L19 7"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                  <span>Hire Me "</span>
+                </span>
+                <span
+                  class="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-purple-500/20 to-indigo-500/20"
+                ></span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Navigation arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-
-        <!-- Progress bar (bottom full width) -->
         <div
           class="swiper-pagination absolute bottom-0 left-0 right-0 z-10"
         ></div>
