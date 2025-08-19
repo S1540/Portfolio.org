@@ -58,17 +58,14 @@
 
     <div
       id="loader"
-      class="fixed inset-0 bg-neutral-600 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-zinc-900 flex items-center justify-center z-50"
     >
-      <div class="flex space-x-2">
-        <div
-          class="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"
-        ></div>
-        <div
-          class="w-4 h-4 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"
-        ></div>
-        <div class="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
-      </div>
+      <lottie-player
+        src="./assets/loading.json"
+        autoplay
+        loop
+        loading="lazy"
+      ></lottie-player>
     </div>
     <!-- Header -->
     <div id="header" class="sticky top-0 z-50 overflow-x-hidden"></div>
