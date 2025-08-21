@@ -82,6 +82,14 @@ document.querySelectorAll(".scroll-reval").forEach((el) => {
   observer.observe(el);
 });
 
+// Social Card
+const Social = document.querySelector("#Social-card");
+fetch("SocialCard.html")
+  .then((response) => response.text())
+  .then((data) => {
+    Social.innerHTML = data;
+  });
+
 // footer section
 const footer = document.getElementById("footerSec");
 fetch("footer.html")
