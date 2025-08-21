@@ -1,12 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./output.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Social Profile Card</title>
+    <!-- Tailwind via CDN (swap for your CLI build in production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="color-scheme" content="dark light" />
   </head>
-  <body>
-    <div></div>
+  <body
+    class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 antialiased"
+  >
+    <div class="max-w-full mx-auto px-6">
+      <div class="flex items-center justify-center py-16">
+        <!-- CARD START -->
+        <article
+          class="w-full max-w-8xl shadow-2xl rounded-2xl overflow-hidden bg-slate-900/80 backdrop-blur-xl ring-1 ring-white/10 transition duration-300 hover:bg-gradient-to-r hover:from-fuchsia-500/20 hover:to-indigo-500/20"
+        >
+          <!-- Avatar -->
+          <div class="p-6 md:px-10 flex items-end gap-4">
+            <img
+              id="userAvatar"
+              src="./assets/Shubham.jpg"
+              alt="Your photo"
+              class="h-28 w-28 md:h-32 md:w-32 rounded-2xl object-cover ring-2 ring-slate-900 shadow-xl"
+            />
+            <div class="pb-2">
+              <h1 class="text-2xl md:text-3xl font-semibold tracking-tight">
+                Shubham Singh
+              </h1>
+              <p class="text-sm md:text-base text-slate-300">
+                @shubham.codes • Frontend Developer
+              </p>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-yellow-400 text-black ring-1 ring-cyan-500/30 px-2.5 py-1 text-xs"
+                >
+                  <i class="fa-solid fa-bolt"></i> Pro
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-blue-600 text-white ring-1 ring-fuchsia-500/30 px-2.5 py-1 text-xs"
+                >
+                  <i class="fa-solid fa-check"></i> Verified
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <p class="px-6 md:px-10 mt-4 text-slate-300 leading-relaxed">
+            Building delightful UI with Tailwind CSS & React. Coffee fuel • Open
+            to freelance projects.
+          </p>
+
+          <!-- Stats -->
+          <section class="px-4 md:px-8 mt-6">
+            <div class="grid grid-cols-3 gap-3">
+              <div
+                class="group rounded-2xl bg-white/5 ring-1 ring-white/10 p-4 text-center hover:bg-white/10 transition"
+              >
+                <p
+                  class="text-2xl md:text-3xl font-semibold tabular-nums"
+                  id="followers"
+                >
+                  10.4k
+                </p>
+                <p class="text-xs md:text-sm text-slate-400">Followers</p>
+              </div>
+              <div
+                class="group rounded-2xl bg-white/5 ring-1 ring-white/10 p-4 text-center hover:bg-white/10 transition"
+              >
+                <p
+                  class="text-2xl md:text-3xl font-semibold tabular-nums"
+                  id="following"
+                >
+                  253
+                </p>
+                <p class="text-xs md:text-sm text-slate-400">Following</p>
+              </div>
+              <div
+                class="group rounded-2xl bg-white/5 ring-1 ring-white/10 p-4 text-center hover:bg-white/10 transition"
+              >
+                <p
+                  class="text-2xl md:text-3xl font-semibold tabular-nums"
+                  id="posts"
+                >
+                  178
+                </p>
+                <p class="text-xs md:text-sm text-slate-400">Posts</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Socials -->
+          <section class="px-6 md:px-10 mt-6 mb-6">
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                href="https://www.instagram.com/shubham__singh.___/?hl=en"
+                target="_blank"
+                class="inline-flex items-center gap-2 rounded-xl bg-white/5 ring-1 ring-white/10 px-3 py-2 hover:bg-white/10 transition"
+                aria-label="Follow on Instagram"
+              >
+                <i class="fa-brands fa-instagram text-lg"></i>
+                <span class="text-sm">Instagram</span>
+                <span class="ml-2 text-xs text-slate-400" id="igCount"
+                  >10.4k</span
+                >
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 rounded-xl bg-white/5 ring-1 ring-white/10 px-3 py-2 hover:bg-white/10 transition"
+                aria-label="Follow on X/Twitter"
+              >
+                <i class="fa-brands fa-x-twitter text-lg"></i>
+                <span class="text-sm">X</span>
+                <span class="ml-2 text-xs text-slate-400" id="xCount"
+                  >2.9k</span
+                >
+              </a>
+              <a
+                href="https://www.linkedin.com/in/shubham-0q7/"
+                target="_blank"
+                class="inline-flex items-center gap-2 rounded-xl bg-white/5 ring-1 ring-white/10 px-3 py-2 hover:bg-white/10 transition"
+                aria-label="Follow on LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin text-lg"></i>
+                <span class="text-sm">LinkedIn</span>
+                <span class="ml-2 text-xs text-slate-400" id="liCount"
+                  >5.3k</span
+                >
+              </a>
+              <a
+                href="https://github.com/S1540"
+                target="_blank"
+                class="inline-flex items-center gap-2 rounded-xl bg-white/5 ring-1 ring-white/10 px-3 py-2 hover:bg-white/10 transition"
+                aria-label="Follow on GitHub"
+              >
+                <i class="fa-brands fa-github text-lg"></i>
+                <span class="text-sm">GitHub</span>
+                <span class="ml-2 text-xs text-slate-400" id="ghCount"
+                  >120</span
+                >
+              </a>
+            </div>
+          </section>
+
+          <!-- CTA Footer -->
+          <div class="px-6 md:px-10 pb-6">
+            <div class="flex flex-wrap gap-3">
+              <button
+                class="group relative inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium ring-1 ring-cyan-400/40 bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 transition"
+              >
+                <i class="fa-solid fa-user-plus"></i>
+                Follow
+              </button>
+              <button
+                class="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium ring-1 ring-white/15 bg-white/5 hover:bg-white/10 transition"
+              >
+                <i class="fa-solid fa-paper-plane"></i>
+                Message
+              </button>
+              <a
+                href="#"
+                class="ml-auto inline-flex items-center gap-2 text-xs text-slate-400 hover:text-slate-200 transition"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+                Share Profile
+              </a>
+            </div>
+          </div>
+        </article>
+        <!-- CARD END -->
+      </div>
+    </div>
   </body>
 </html>

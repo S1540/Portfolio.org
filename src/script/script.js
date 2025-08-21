@@ -154,6 +154,15 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+
+// Social Card
+const Social = document.querySelector("#Social-card");
+fetch("SocialCard.html")
+  .then((response) => response.text())
+  .then((data) => {
+    Social.innerHTML = data;
+  });
+
 // Footer Section
 
 const footer = document.getElementById("footerSec");
